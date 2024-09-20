@@ -61,7 +61,7 @@ class Phieu
 };
 void Phieu::Nhap()
 {
-    cout << "Ma Phieu: ";                   cin.ignore(); cin.getline(maphieu,50);
+    cout << "Ma Phieu: ";                    cin.ignore(); cin.getline(maphieu,50);
     cout << "Ngay Lap: ";                    cin.ignore(); cin.getline(NgayLap,50);
     cout << "Nhap So Luong Hang: ";                       cin >> n;
     for(int i=0; i<n;i++)
