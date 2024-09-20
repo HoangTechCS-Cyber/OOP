@@ -20,7 +20,6 @@ void NhaCC::Nhap()
 }
 void NhaCC::Xuat()
 {
-    cout << left <<setw(30)<< "Ma NCC: "<< MaNcc  <<setw(30) << TenNCC<<endl;
     cout << left <<setw(30)<< "Dia Chi: "<<DiaChi<<endl;
 }
 // Hang
@@ -41,12 +40,8 @@ void Hang::Nhap()
     cout << "Nhap Don Gia: ";                             cin >> DonGia;
     cout << "Nhap So Luong: ";                            cin >> SoLuong;
 }
-void Hang::Xuat();
 {
     cout << left<< setw(30) <<TenHang
-                << setw(30) <<DonGia;
-                << setw(30) <<SoLuong;
-                << setw(30) << (float)SoLuong * DonGia;
 }
 class Phieu
 {   private:
