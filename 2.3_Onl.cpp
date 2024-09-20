@@ -33,7 +33,7 @@ class Phieu
     public:
         void Nhap();
         void Xuat();
-}
+};
 void Phieu::Nhap()
 {
     cout << "Ma Phieu: ";                   cin.ignore(); cin.getline(maphieu, 50);
