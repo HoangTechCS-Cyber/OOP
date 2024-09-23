@@ -5,15 +5,14 @@ using namespace std;
 
 class HANG
 {
-public:
-	void NHAP();
-	void XUAT();
-
-private:
-	char Mahang[10];
-	char Tenhang[30];
-	float Dongia;
-	int SoLuong;
+	private:
+		char Mahang[10];
+		char Tenhang[30];
+		float Dongia;
+		int SoLuong;
+	public:
+		void NHAP();
+		void XUAT();
 };
 
 void HANG::NHAP()
@@ -36,12 +35,13 @@ void HANG::XUAT()
 		cout << setw(30)  << SoLuong << endl;
 }
 int main()
-{	cout << "Nhap so mat hang: ";	cin >> n;
-	HANG a[n]
+{	int n; 
+    cout << "Nhap so mat hang: ";	cin >> n;
+	HANG a[n];
 	for (int i = 0; i < n; i++)
 	a[i].NHAP();
-	cout << left <<setw(30) << "MaHang" << setw(30)<<"Tenhang"<<setw(30)<<"Dongia"<<setw(30)<<"SoLuong"<<endl;
+	cout << left <<setw(30) << "Ma Hang" << setw(30)<<"Ten hang"<<setw(30)<<"Don gia"<<setw(30)<<"So Luong"<<endl;
 	for (int i = 0; i < n; i++)
-	a.XUAT();
+	a[i].XUAT();
 
 }
