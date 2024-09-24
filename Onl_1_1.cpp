@@ -20,8 +20,8 @@ void NhaCC::Nhap()
 }
 void NhaCC::Xuat()
 {
-    cout << left <<setw(30)<< "Ma NCC: "<< MaNcc  <<setw(30) << "Ten NCC" << TenNCC<<endl;
-    cout << left <<setw(30)<< "Dia Chi: "<<DiaChi<<endl;
+    cout << "Ma NCC: "<<setw(30)<< MaNcc   << "Ten NCC: " << TenNCC<<endl;
+    cout << "Dia Chi: "<<DiaChi<<endl;
 }
 // Hang
 class Hang
@@ -33,6 +33,7 @@ class Hang
     public: 
         void Nhap();
         void Xuat();
+    friend class Phieu;
 
 };
 void Hang::Nhap()
@@ -55,6 +56,7 @@ class Phieu
         NhaCC x;
         Hang a[30];
         int n;
+
     public:
         void Nhap();
         void Xuat();
@@ -63,6 +65,7 @@ void Phieu::Nhap()
 {
     cout << "Ma Phieu: ";                    cin.ignore(); cin.getline(maphieu,50);
     cout << "Ngay Lap: ";                    cin.ignore(); cin.getline(NgayLap,50);
+    x.Nhap();
     cout << "Nhap So Luong Hang: ";                       cin >> n;
     for(int i=0; i<n;i++)
     {
@@ -71,19 +74,22 @@ void Phieu::Nhap()
 }
 void Phieu::Xuat()
 {   
-    cout << left << setw(30) << maphieu
-                 << setw(30) << NgayLap<<endl;
+    cout<<left <<"Ma Phieu: "<<setw(30)<< maphieu
+               <<"Ngay Lap: " << NgayLap<<endl;
     x.Xuat();
     cout <<left<< setw(30) <<"Ten Hang" << setw(30) << "Don Gia"<<setw(30) << "So Luong"<< "Thanh Tien"<<endl;
+    float Tong =0;
     for(int i = 0;i < n; i++)
         {
             a[i].Xuat();
+            Tong +=a[i].SoLuong*a[i].DonGia;
         }
+    cout << left << setw(90)<<" " << "Tong Tien: "<< Tong;
+    
 }
 
 int main()
-{   NhaCC c;
-    c.Nhap();
+{  
     Phieu a;
     a.Nhap();
     a.Xuat();
