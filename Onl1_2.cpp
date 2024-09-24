@@ -22,7 +22,32 @@ void sv::Nhap()
 }
 void sv:Xuat()
 {
-	cout << left<< setw(30)<< "Ma Sinh Vien: "<< msv << setw(30)<< "Ten Sinh Vien: "<< Ten << endl
-				<< setw(30)<< "Lop: "<<Lop
-				<< setw(30)<< 
+	
+}
+class Mon
+{	private:
+		char TenMon[50];
+		int Strinh;
+		float Diem;
+	public:
+		void Nhap();
+		void Xuat();
+	friend class Phieu;
+};
+
+void Mon::Nhap()
+{
+cout << "ten mon: "; 			cin.ignore(); cin.getline(TenMon);
+cout << "Strinh: ";							  cin>>Strinh;
+cout << "Diem: ";							  cin>>Diem;
+}
+void Mon::Xuat()
+{
+	cout << setw()
+}
+
+float Dem(Mon b)
+{
+	for(int i =0; i< n; i++)
+		if()
 }
