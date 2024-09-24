@@ -87,11 +87,15 @@ void Phieu::Xuat()
     cout << left << setw(90)<<" " << "Tong Tien: "<< Tong;
     
 }
-
+void sx(Phieu b)
+{
+    sort(b.x[1].SoLuong, b.x[x.size()].SoLuong);
+}
 int main()
 {  
     Phieu a;
     a.Nhap();
+    sx(b);
     a.Xuat();
 }
 
