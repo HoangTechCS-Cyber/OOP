@@ -45,3 +45,4 @@ int main()
 	a[i].XUAT();
 
 }
+//node
