@@ -51,4 +51,3 @@ float Dem(Mon b)
 	for(int i =0; i< n; i++)
 		if()
 }
-// node
