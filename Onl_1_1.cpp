@@ -98,4 +98,3 @@ int main()
     sx(b);
     a.Xuat();
 }
-
