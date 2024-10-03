@@ -1,6 +1,7 @@
 #include<bits/stdc++.h>
+#include<iostream>
 using namespace std;
-class sv
+class sv//nodea ádasd
 {
     private:
         int msv;
