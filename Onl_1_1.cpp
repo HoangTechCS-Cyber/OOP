@@ -23,7 +23,7 @@ void NhaCC::Xuat()
     cout << "Ma NCC: "<<setw(30)<< MaNcc   << "Ten NCC: " << TenNCC<<endl;
     cout << "Dia Chi: "<<DiaChi<<endl;
 }
-// Hang
+// Hang node
 class Hang
 {
     private: 
