@@ -2,7 +2,7 @@
 #include <iomanip>
 #include <string>
 using namespace std;
-
+//node
 class HANG
 {
 	private:
