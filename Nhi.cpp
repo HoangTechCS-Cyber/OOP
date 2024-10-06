@@ -31,9 +31,7 @@ void KH::nhap() {
     cout << "Nhap Ho Ten KH: ";                  cin.ignore(); getline(cin, ht);
 
     cout << "Nhap Ngay Sinh (dd mm yyyy): ";     cin >> ns.Ngay >> ns.Thang >> ns.Nam;
-
- 
-
+    
     cout << "Nhap So CMT: ";                     cin.ignore();getline(cin, cmt);
 
     cout << "Nhap Ho Khau: ";                    cin.ignore();getline(cin, k);
@@ -84,8 +82,8 @@ int main() {
 
     cout << "\n--- Danh sach khach hang sau khi sap xep theo ho ten ---\n";
     cout << left << setw(30) << "Ho Ten"
-             << setw(12) << "Ngay Sinh"
-          << setw(15) << "CMT"
+                 << setw(12) << "Ngay Sinh"
+                 << setw(15) << "CMT"
          << left << setw(50) << "Ho Khau"
          << endl;
     cout << string(107, '-') << endl;
@@ -96,7 +94,7 @@ int main() {
     cout << "\n--- Danh sach khach hang co sinh nhat thang 12 ---\n";
     cout << left << setw(30) << "Ho Ten"
                  << setw(12) << "Ngay Sinh"
-         << setw(15) << "CMT"
+                 << setw(15) << "CMT"
          << left << setw(50) << "Ho Khau"
          << endl;
     cout << string(107, '-') << endl;
