@@ -93,4 +93,17 @@ signed main()
     // rep();
     phanso ps1(1,2); //goi ptkt co doi 
     phanso ps2(5,6); // goi ptkt co doi
+    phanso ps5;
+    cout << "\n Nhap phaso ps5: ";
+    cin >> ps5; // goi ham toan tu nhap;
+
+    ps3 = ps1 + ps2;
+    cout << ps1;
+    cout << ps2;
+    cout << "\n Ket qua cong 2 phan so: ";
+    cout << ps3;
+    ps4 =! ps2; // giu pttt - su dung pttt doi dau
+    cout << "\n Ket qua doi dau phan so thu 2: ";
+    cout << ps4;
+    
 }
