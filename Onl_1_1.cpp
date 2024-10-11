@@ -1,40 +1,47 @@
 #include<bits/stdc++.h>
+
 using namespace std;
 
-class NhaCC
+#define int long long 
+#define ld long double
+#define For(i,a,b) for(int i =a; i<=b;i++)
+#define pii pair<int, int> 
+
+const int MOD = 1e9+7;
+const int N = 100;
+const int maxn = 150000;
+class HANG
+{ 
+    private:
+        char tenhang[30];
+        float dongia[30];
+        int soluong[30];
+    public:
+        void nhap();
+        void xuat();
+};
+void HANG::nhap()
+{
+    cout <<"Nhap Ten Hang: ";                                       cin.ignore(); cin.getline(tenhang, 30);
+    cout <<"Nhap dongia: ";                                                       cin >> dongia;
+    cout << "Nhap so luong: ";                                                    cin >> soluong;
+}
+void HANG::xuat()
+{
+    cout <<left<<setw(15)<<tenhang
+               <<setw(15)<<dongia
+               <<setw(15)<<soluong
+               << soluong *dongia << endl;
+}
+class NCC
 {
     private:
-        char MaNcc[50];
-        char TenNCC[50];
-        char DiaChi[150];
+        char mancc[30];
+        char tenncc[30];
+        char diachi[30];
     public:
-        void Nhap();
-        void Xuat();
-};
-void NhaCC::Nhap()
-{
-    cout << "Nhap Ma Ncc: ";            cin.ignore(); cin.getline(MaNcc, 50);
-    cout << "Nhap Ten Ncc: ";           cin.ignore(); cin.getline(TenNCC, 50);
-    cout << "Nhap Dia Chi: ";           cin.ignore(); cin.getline(DiaChi, 50);
-
-}
-void NhaCC::Xuat()
-{
-    cout << "Ma NCC: "<<setw(30)<< MaNcc   << "Ten NCC: " << TenNCC<<endl;
-    cout << "Dia Chi: "<<DiaChi<<endl;
-}
-// Hang node
-class Hang
-{
-    private: 
-        char TenHang[30];
-        float DonGia;
-        int SoLuong;
-    public: 
-        void Nhap();
-        void Xuat();
-    friend class Phieu;
-
+        void nhap();
+        void xuat();
 };
     void NCC::nhap()
     {
