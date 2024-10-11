@@ -36,65 +36,49 @@ class Hang
     friend class Phieu;
 
 };
-void Hang::Nhap()
-{
-    cout << "Nhap Ten Hang: ";              cin.ignore(); cin.getline(TenHang,30);
-    cout << "Nhap Don Gia: ";                             cin >> DonGia;
-    cout << "Nhap So Luong: ";                            cin >> SoLuong;
-}
-void Hang::Xuat()
-{
-    cout << left<< setw(30) <<TenHang
-                << setw(30) <<DonGia
-                << setw(30) <<SoLuong
-                << setw(30) << (float)SoLuong * DonGia<<endl;
-}
-class Phieu
-{   private:
-        char maphieu[50];
-        char NgayLap[30];
-        NhaCC x;
-        Hang a[30];
-        int n;
-
-    public:
-        void Nhap();
-        void Xuat();
-};
-void Phieu::Nhap()
-{
-    cout << "Ma Phieu: ";                    cin.ignore(); cin.getline(maphieu,50);
-    cout << "Ngay Lap: ";                    cin.ignore(); cin.getline(NgayLap,50);
-    x.Nhap();
-    cout << "Nhap So Luong Hang: ";                       cin >> n;
-    for(int i=0; i<n;i++)
+    void NCC::nhap()
     {
-        a[i].Nhap();
+        cout << "Nhap ma NCC: ";                                    cin.ignore(); cin.getline(mancc, 30);
+        cout << "Nhap ten NCC: ";                                   cin.ignore(); cin.getline(tenncc, 30);
+        cout << "Nhap dia chi: ";                                   cin.ignore(); cin.getline(diachi, 30);
     }
-}
-void Phieu::Xuat()
-{   
-    cout<<left <<"Ma Phieu: "<<setw(30)<< maphieu
-               <<"Ngay Lap: " << NgayLap<<endl;
-    x.Xuat();
-    cout <<left<< setw(30) <<"Ten Hang" << setw(30) << "Don Gia"<<setw(30) << "So Luong"<< "Thanh Tien"<<endl;
-    float Tong =0;
-    for(int i = 0;i < n; i++)
-        {
-            a[i].Xuat();
-            Tong +=a[i].SoLuong*a[i].DonGia;
-        }
-    cout << left << setw(90)<<" " << "Tong Tien: "<< Tong;
-    
-}
-void sx(Phieu b)
+    void NCC::xuat()
+    {
+        cout << left <<"MA NCC: " <<setw(15)<< mancc<<"Ten NCC: "<<tenncc<< endl;
+        cout << left << "Dia chi: "<< diachi<< endl;
+    }
+class PHIEU
 {
-    sort(b.x[1].SoLuong, b.x[x.size()].SoLuong);
-}
-int main()
-{  
-    Phieu a;
-    a.Nhap();
-    sx(b);
-    a.Xuat();
+    private:
+        char maphieu[30];
+        char ngaylap[30];
+        NCC  ncc;
+        HANG x[30];
+        int n;
+    public:
+        void nhap();
+        void xuat();  
+};
+    void PHIEU::nhap()
+    {
+        cout << "Nhap ma Phieu: ";                                  cin.ignore(); cin.getline(maphieu, 30);
+        cout << "Nhap Ngay Lap: ";                                  cin.ignore(); cin.getline(ngaylap, 30);
+        ncc.nhap();
+        cout << "Nhap so luong hang hoa: ";                                       cin >> n;
+        For(i, 1, n) x[i].nhap();
+    }
+    void PHIEU::xuat()
+    {
+        cout << left<<"Ma Phieu: "<< setw(15)<< maphieu << "Ngay Lap: "<<ngaylap<< endl;
+        ncc.xuat();
+        For(i, 1, n) x[i].xuat();
+    }
+
+signed main()
+{
+#ifndef LOCAL
+    ios::sync_with_stdio(0); cin.tie(0); cout.tie(0);
+#endif
+
+
 }
