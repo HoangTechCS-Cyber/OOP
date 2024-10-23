@@ -12,6 +12,7 @@ public:
     void nhap();
     void xuat();
 };
+//
 void nguoi::nhap()
 {
     cout<<"ho ten la ";                     fflush(stdin);          gets(hoten);
