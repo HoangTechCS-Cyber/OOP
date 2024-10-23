@@ -5,6 +5,7 @@ using namespace std;
 class Phieu;
 class Phong
 {
+    //
     char MaP[30];
     char TenP[30];
     char TruongP[30];
