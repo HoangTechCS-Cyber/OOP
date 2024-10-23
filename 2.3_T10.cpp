@@ -1,6 +1,6 @@
 #include<bits/stdc++.h>
 using namespace std;
-
+//
 class Hang
 {   private: 
         char MaHang[50];
