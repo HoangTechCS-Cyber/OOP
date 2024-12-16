@@ -1,4 +1,5 @@
-#include<bits/stdc++.h>
+#include<iostream>
+#include<iomanip>
 using namespace std;
 
 class Hang{
@@ -58,7 +59,7 @@ void Phieu::Nhap(){
     for(int i = 0; i < n; i++){
         a[i].Nhap();
     }
-  
+
 }
 
 void Phieu::Xuat(){
